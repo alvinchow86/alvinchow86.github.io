@@ -1,12 +1,8 @@
 ---
 layout: post
-title: Migration to microservices in seven months
+title: Microservices migration case study
 categories: Backend
-excerpt: Migrating a monolithic codebase to microservices in seven months.
+excerpt: Migrating a monolithic codebase to microservices in seven months at Trusttoken.
 ---
 
-This is a post about microservices.
-
-This is a post about microservices1.
-
-This is a post about microservices.
+Migrating a monolithic codebase to microservices in seven months at Trusttoken.
