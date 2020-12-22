@@ -11,7 +11,7 @@ permalink: /posts/
         <h3>{{ post.title }}</h3>
 
         <!-- <div>
-          <p class="post_date">{{ post.date | date: "%B %e, %Y" }}</p>
+          <p class="post-date">{{ post.date | date: "%B %e, %Y" }}</p>
         </div> -->
       </a>
     </div>
