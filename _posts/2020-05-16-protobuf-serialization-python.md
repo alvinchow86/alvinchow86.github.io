@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python protobuf serialization library
+title: Python Protobuf Serialization Library
 categories: Backend
 excerpt: Introducing protobuf-serialization-py, helpers for Python gRPC protobuf serialization/deserialization.
 ---

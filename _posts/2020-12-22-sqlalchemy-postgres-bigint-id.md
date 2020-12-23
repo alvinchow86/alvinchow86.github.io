@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SQLAlchemy PostgreSQL 64-bit ID generation
+title: SQLAlchemy PostgreSQL 64-bit ID Generation
 categories: Backend
 excerpt: Introducing SQLAlchemy-Postgres-BigInt-ID, a library to automate 64-bit IDs in SQLAlchemy and PostgreSQL.
 ---
