@@ -28,11 +28,10 @@ Here were some of the key design objectives:
   - Docker-compose based local development (one or two "clicks" to spin up the entire service)
   - Fast running unit test suite
 
-I've also tried to retain some of the minimal things that web frameworks tend to do that do tend to be useful for an API-serving bakcend service. For example..
+I've also tried to retain some of the minimal things that web frameworks tend to do that are useful for an API-serving backend service. For example:
 - A way to application configuration for different environments (local, staging, prod) with environment variables
 - Have somewhere to do one-time application initialization stuff (like setting up database connections)
 - Do cleanup between API requests or worker tasks (e.g. cleanup the database session, clear any in-memory cache)
 - Developer conveniences (Python shell, CLI commands, database migration flow)
-
 
 Check it out at [https://github.com/alvinchow86/python-backend-template](https://github.com/alvinchow86/python-backend-template), and feel free to try using it for your next Python backend project! Additional documentation is in the README.
