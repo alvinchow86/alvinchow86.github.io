@@ -14,19 +14,25 @@ I think that it is better not to think of a Python-based backend app as a "Djang
 
 For my last few startups I've been developing a simple backend application structure puts this idea to practice, which I've open-sourced as a template. It is a little bit inspired by Flask applications and other microframeworks, but taking the "micro" to the next level. It should be noted that this template could be re-used for either a monolith or a microservice; the intention is that the code structure shouldn't fundamentally change too much for either, so that it is easy to migrate from one to the other.
 
-Here were the primary design objectives:
+Here were some of the key design objectives:
 
 1. **Not be overly tied to a specific library or framework**
   - Any library or technology should be possible to swap out (e.g. Flask could be swapped for another web framework, SQLAlchemy could be switched to another ORM, etc)
-  - I avoid helper libraries like Flask-sqlalchemy, because this would create too much of a Flask dependence
-2. **Encourage good coding practices, like separation of concerns**. Explicit coding style and separation of concerns (e.g. separate API, database and application logic layers) is good for testing, and also greatly simplifies refactoring and breaking apart a growing codebase
+  - I avoid helper libraries like Flask-SQLAlchemy, because this would create too much of a Flask dependence
+2. **Encourage good coding practices, like separation of concerns**.
+  - Explicit coding style and separation of concerns (e.g. separate API, database and application logic layers) is good for testing, and also greatly simplifies refactoring and breaking apart a growing codebase
 3. **Be prepared for future microservice refactors**.
   - Make it straightforward to start with a monolith or larger service, and refactor into smaller ones (or move functionality to another service). A microservice migration should look more like copy-pasting rather than a costly rewrite.
+  - Common code and utilities live in a separate library
+4. **Easy and fast development experience**.
+  - Docker-compose based local development (one or two "clicks" to spin up the entire service)
+  - Fast running unit test suite
 
-I've also tried to distill out some of the minimal things that web frameworks tend to do that do tend to be useful for an API-serving bakcend service. For example..
+I've also tried to retain some of the minimal things that web frameworks tend to do that do tend to be useful for an API-serving bakcend service. For example..
 - A way to application configuration for different environments (local, staging, prod) with environment variables
 - Have somewhere to do one-time application initialization stuff (like setting up database connections)
 - Do cleanup between API requests or worker tasks (e.g. cleanup the database session, clear any in-memory cache)
+- Developer conveniences (Python shell, CLI commands, database migration flow)
 
 
 Check it out at [https://github.com/alvinchow86/python-backend-template](https://github.com/alvinchow86/python-backend-template), and feel free to try using it for your next Python backend project! Additional documentation is in the README.
